@@ -1,0 +1,14 @@
+{
+  "shutdownOrder": [
+    "AksUserNodePools",
+    "AksClusterStop",
+    "AppServiceNonProd",
+    "DatabasePause"
+  ],
+  "startupOrder": [
+    "DatabaseResume",
+    "KeyVaultConnectivityCheck",
+    "AksClusterStart",
+    "AksUserNodePools"
+  ]
+}

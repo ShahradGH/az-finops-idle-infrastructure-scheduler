@@ -1,0 +1,9 @@
+// Audit non-production deallocation savings and developer snooze lease usage
+FinOpsIdleSchedulerAudit_CL
+| where TimeGenerated > ago(30d)
+| summarize 
+    DeallocatedRuns = countif(Deallocate_b == true),
+    DeveloperSnoozes = countif(Action_s == "SKIP_ACTIVE_DEVELOPER_SNOOZE_LEASE"),
+    EstimatedSavedGbp = round(sum(ReclaimedHours_d * HourlyRateGbp_d), 2)
+    by SquadName_s, SubscriptionName_s
+| order by EstimatedSavedGbp desc
