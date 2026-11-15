@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "FOCUS-1.0",
+  "domain": "azure-finops-idle-scheduler",
+  "abstentionThreshold": 0.74,
+  "foundryToolSchema": {
+    "type": "function",
+    "function": {
+      "name": "predict_idle_deallocation_window",
+      "description": "Fuses FinOps FOCUS 1.0 cost telemetry, Azure Monitor metrics, GitHub/AzDO webhook velocity, and Microsoft Graph/Work IQ presence to forecast safe non-production deallocation windows.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "resourceGroup": { "type": "string" },
+          "environmentTag": { "type": "string" },
+          "effectiveHourlyCost": { "type": "number" },
+          "baselineHourlyCost": { "type": "number" },
+          "avgCpuPercent60m": { "type": "number" },
+          "recentCommits2h": { "type": "integer" },
+          "ownerPresence": { "type": "string", "enum": ["Available", "Busy", "DoNotDisturb", "Away", "Offline"] }
+        },
+        "required": ["resourceGroup", "environmentTag", "effectiveHourlyCost", "avgCpuPercent60m", "ownerPresence"]
+      }
+    }
+  },
+  "focusRecords": [
+    {
+      "BillingAccountId": "BA-CONTOSO-001",
+      "ChargeCategory": "Usage",
+      "ServiceName": "Azure Kubernetes Service",
+      "ResourceId": "/subscriptions/00000000-0000-0000-0000-000000000016/resourceGroups/rg-dev-checkout-uks/providers/Microsoft.ContainerService/managedClusters/aks-dev-checkout",
+      "x_ResourceGroupName": "rg-dev-checkout-uks",
+      "ConsumedQuantity": 24.0,
+      "ConsumedUnit": "Hours",
+      "EffectiveCost": 4.82,
+      "BilledCost": 4.82,
+      "BaselineHourlyCost": 1.65,
+      "Tags": {
+        "Environment": "dev",
+        "OwnerUpn": "alex.morgan@contoso.com",
+        "CostCentre": "CC-4102"
+      }
+    },
+    {
+      "BillingAccountId": "BA-CONTOSO-001",
+      "ChargeCategory": "Usage",
+      "ServiceName": "Azure Database for PostgreSQL",
+      "ResourceId": "/subscriptions/00000000-0000-0000-0000-000000000016/resourceGroups/rg-uat-payments-uks/providers/Microsoft.DBforPostgreSQL/flexibleServers/pg-uat-payments",
+      "x_ResourceGroupName": "rg-uat-payments-uks",
+      "ConsumedQuantity": 24.0,
+      "ConsumedUnit": "Hours",
+      "EffectiveCost": 2.15,
+      "BilledCost": 2.15,
+      "BaselineHourlyCost": 2.10,
+      "Tags": {
+        "Environment": "uat",
+        "OwnerUpn": "sam.patel@contoso.com",
+        "CostCentre": "CC-4109"
+      }
+    }
+  ]
+}

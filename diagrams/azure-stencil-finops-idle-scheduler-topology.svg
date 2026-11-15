@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <style>
+      .bg { fill: #0a1128; }
+      .title { font-family: 'Segoe UI', Arial, sans-serif; font-size: 34px; font-weight: 700; fill: #f8fafc; }
+      .subtitle { font-family: 'Segoe UI', Arial, sans-serif; font-size: 18px; fill: #94a3b8; }
+      .enclave { fill: #0f1b3d; stroke: #38bdf8; stroke-width: 2.5; rx: 14; }
+      .enclave-ai { fill: #16163a; stroke: #c084fc; stroke-width: 2.5; rx: 14; }
+      .enclave-prod { fill: #28111c; stroke: #fb7185; stroke-width: 2.5; stroke-dasharray: 8 6; rx: 14; }
+      .node { fill: #162447; stroke: #0ea5e9; stroke-width: 2; rx: 10; }
+      .node-ai { fill: #1f1b4d; stroke: #c084fc; stroke-width: 2; rx: 10; }
+      .node-ok { fill: #0d2e26; stroke: #10b981; stroke-width: 2; rx: 10; }
+      .node-veto { fill: #3b0d1d; stroke: #fb7185; stroke-width: 2; rx: 10; }
+      .lbl-hdr { font-family: 'Segoe UI', Arial, sans-serif; font-size: 20px; font-weight: 700; fill: #38bdf8; }
+      .lbl-ai { font-family: 'Segoe UI', Arial, sans-serif; font-size: 20px; font-weight: 700; fill: #c084fc; }
+      .lbl-veto { font-family: 'Segoe UI', Arial, sans-serif; font-size: 20px; font-weight: 700; fill: #fb7185; }
+      .txt-main { font-family: 'Segoe UI', Arial, sans-serif; font-size: 17px; font-weight: 600; fill: #f1f5f9; }
+      .txt-sub { font-family: 'Consolas', monospace; font-size: 14px; fill: #94a3b8; }
+      .line-blue { stroke: #38bdf8; stroke-width: 3; fill: none; marker-end: url(#a-blue); }
+      .line-purple { stroke: #c084fc; stroke-width: 3; fill: none; marker-end: url(#a-purple); }
+      .line-green { stroke: #10b981; stroke-width: 3; fill: none; marker-end: url(#a-green); }
+      .line-red { stroke: #fb7185; stroke-width: 3; stroke-dasharray: 7 5; fill: none; marker-end: url(#a-red); }
+    </style>
+    <marker id="a-blue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#38bdf8"/></marker>
+    <marker id="a-purple" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#c084fc"/></marker>
+    <marker id="a-green" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#10b981"/></marker>
+    <marker id="a-red" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#fb7185"/></marker>
+  </defs>
+
+  <rect class="bg" width="1920" height="1080"/>
+  <text x="60" y="65" class="title">FinOps Idle Infrastructure Scheduler: FOCUS + AI + Work IQ Topology</text>
+  <text x="60" y="98" class="subtitle">FinOps Toolkit FOCUS 1.0 • Multi-Signal AI Forecaster • Graph v2.x [Snooze 3h] • Topological Invoke-AzRestMethod Control</text>
+
+  <!-- Left: Signal Ingestion -->
+  <rect class="enclave" x="60" y="140" width="460" height="620"/>
+  <text x="85" y="180" class="lbl-hdr">MULTI-SIGNAL TELEMETRY FUSION</text>
+  <text x="85" y="205" class="txt-sub">Cost + Compute + Developer Velocity</text>
+
+  <rect class="node" x="90" y="235" width="400" height="115"/>
+  <text x="110" y="270" class="txt-main">Microsoft FinOps Toolkit (FOCUS 1.0)</text>
+  <text x="110" y="295" class="txt-sub">EffectiveCost vs BaselineHourlyCost</text>
+  <text x="110" y="318" class="txt-sub">Anomaly Ratio &gt;= 1.8x Triggers Cost Flag</text>
+
+  <rect class="node" x="90" y="375" width="400" height="115"/>
+  <text x="110" y="410" class="txt-main">Azure Monitor &amp; KQL Telemetry</text>
+  <text x="110" y="435" class="txt-sub">AvgCpuPercent60m &lt;= 5.0%</text>
+  <text x="110" y="458" class="txt-sub">ActiveSqlUserConnections &lt;= 1</text>
+
+  <rect class="node" x="90" y="515" width="400" height="105"/>
+  <text x="110" y="550" class="txt-main">GitHub / Azure DevOps Webhooks</text>
+  <text x="110" y="575" class="txt-sub">RecentCommits2h == 0 &amp;&amp; OpenPrChecks == 0</text>
+  <text x="110" y="598" class="txt-sub">Prevents mid-CI/CD environment kills</text>
+
+  <rect class="node-ok" x="90" y="645" width="400" height="90"/>
+  <text x="110" y="680" class="txt-main">Work IQ &amp; Graph v2.x Presence</text>
+  <text x="110" y="705" class="txt-sub">GET /v1.0/users/{ownerUpn}/presence</text>
+
+  <!-- Center: AI Forecaster & Graph Snooze -->
+  <rect class="enclave-ai" x="580" y="140" width="660" height="620"/>
+  <text x="610" y="180" class="lbl-ai">AI FORECASTER &amp; HUMAN-IN-THE-LOOP GRAPH GATE</text>
+  <text x="610" y="205" class="txt-sub">Confidence Threshold &gt;= 0.74 • Prompt-Injection Filtered Tags</text>
+
+  <rect class="node-ai" x="610" y="235" width="600" height="175"/>
+  <text x="630" y="270" class="txt-main">ai/Predict-IdleDeallocationWindow.ps1</text>
+  <text x="630" y="298" class="txt-sub">• Weighted Fusion: CPU (0.38) + SQL (0.22) + Git (0.20) + WorkIQ (0.20)</text>
+  <text x="630" y="322" class="txt-sub">• If Score &lt; 0.74 -&gt; ABSTAIN_DEFER_TO_HUMAN_SNOOZE</text>
+  <text x="630" y="346" class="txt-sub">• Foundry Tool: predict_idle_deallocation_window</text>
+  <text x="630" y="370" class="txt-sub">• Outputs EstimatedDailySave &amp; CostAnomalyRatio</text>
+
+  <rect class="node-ok" x="610" y="440" width="600" height="145"/>
+  <text x="630" y="475" class="txt-main">graph/Invoke-TeamsSnoozeHandshake.ps1</text>
+  <text x="630" y="503" class="txt-sub">• Posts Teams Adaptive Card with [Snooze 3h] Action.Submit</text>
+  <text x="630" y="528" class="txt-sub">• Respects Active Developer Snooze Lease &amp; Available Presence</text>
+  <text x="630" y="553" class="txt-sub">• Defers automatically if OwnerPresence == 'Available'</text>
+
+  <rect class="node" x="610" y="610" width="600" height="125"/>
+  <text x="630" y="645" class="txt-main">Hard Policy Gate (Test-NonProdIdleDeallocationGate.ps1)</text>
+  <text x="630" y="673" class="txt-sub">• EnvironmentTag in ('prod', 'production', 'dr') -&gt; HARD VETO</text>
+  <text x="630" y="698" class="txt-sub">• HasActiveSnoozeLease == $true -&gt; SKIP_ACTIVE_DEVELOPER_SNOOZE_LEASE</text>
+
+  <!-- Right: Topological Execution & Prod Veto -->
+  <rect class="enclave" x="1300" y="140" width="560" height="410"/>
+  <text x="1330" y="180" class="lbl-hdr">NON-PROD TOPOLOGICAL EXECUTION</text>
+  <text x="1330" y="205" class="txt-sub">Invoke-AzRestMethod • Zero Bicep/Terraform</text>
+
+  <rect class="node-ok" x="1330" y="235" width="500" height="140"/>
+  <text x="1350" y="270" class="txt-main">Ordered Shutdown (config/dependency-tiers.json)</text>
+  <text x="1350" y="298" class="txt-sub">1. AksUserNodePools  -&gt; 2. AksClusterStop</text>
+  <text x="1350" y="322" class="txt-sub">3. AppServiceNonProd -&gt; 4. DatabasePause</text>
+  <text x="1350" y="346" class="txt-sub">Mutes Azure Monitor alerts during deallocation</text>
+
+  <rect class="node" x="1330" y="400" width="500" height="125"/>
+  <text x="1350" y="435" class="txt-main">07:30 UTC Pre-Warm (Start-PreWarmSequence.ps1)</text>
+  <text x="1350" y="463" class="txt-sub">1. DatabaseResume -&gt; 2. KeyVaultConnectivityCheck</text>
+  <text x="1350" y="488" class="txt-sub">3. AksClusterStart -&gt; 4. AksUserNodePools</text>
+
+  <!-- Prod Protection Box -->
+  <rect class="enclave-prod" x="1300" y="580" width="560" height="180"/>
+  <text x="1330" y="620" class="lbl-veto">PRODUCTION &amp; DR HARD VETO ENCLAVE</text>
+  <rect class="node-veto" x="1330" y="640" width="500" height="95"/>
+  <text x="1350" y="675" class="txt-main">VETO_PRODUCTION_ENVIRONMENT_PROTECTED</text>
+  <text x="1350" y="702" class="txt-sub">Zero control-plane mutations permitted on prod/dr tags</text>
+
+  <!-- Footer -->
+  <rect class="node" x="60" y="800" width="1800" height="210"/>
+  <text x="90" y="840" class="lbl-hdr">FINOPS GOVERNANCE &amp; TELEMETRY INVARIANTS</text>
+  <text x="90" y="878" class="txt-main">1. FOCUS 1.0 Native: Ingests EffectiveCost, BilledCost, and ConsumedQuantity for accurate daily savings attribution.</text>
+  <text x="90" y="913" class="txt-main">2. Developer Empathy: Graph v2.x Work IQ presence + Teams [Snooze 3h] prevents disrupting late-night debugging sessions.</text>
+  <text x="90" y="948" class="txt-main">3. Dependency-Safe: Databases always pause last and resume first, preventing Kubernetes CrashLoopBackOff storms.</text>
+  <text x="90" y="983" class="txt-sub">queries/Idle-Compute-Candidates.kql • PowerShell 7.4+ • Pester 6.x Verified</text>
+
+  <!-- Connectors -->
+  <path class="line-blue" d="M 490 292 L 610 292"/>
+  <path class="line-blue" d="M 490 432 L 610 325"/>
+  <path class="line-blue" d="M 490 567 L 610 355"/>
+  <path class="line-green" d="M 490 690 L 610 510"/>
+  <path class="line-purple" d="M 910 410 L 910 440"/>
+  <path class="line-green" d="M 1210 510 L 1330 305"/>
+  <path class="line-red" d="M 1210 675 L 1330 685"/>
+</svg>

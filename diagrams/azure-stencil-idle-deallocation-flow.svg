@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <style>
+      .bg { fill: #0a1128; }
+      .title { font-family: 'Segoe UI', Arial, sans-serif; font-size: 34px; font-weight: 700; fill: #f8fafc; }
+      .subtitle { font-family: 'Segoe UI', Arial, sans-serif; font-size: 18px; fill: #94a3b8; }
+      .actor { fill: #162447; stroke: #38bdf8; stroke-width: 2.5; rx: 10; }
+      .actor-ai { fill: #1f1b4d; stroke: #c084fc; stroke-width: 2.5; rx: 10; }
+      .actor-graph { fill: #0d2e26; stroke: #10b981; stroke-width: 2.5; rx: 10; }
+      .lifeline { stroke: #334155; stroke-width: 2.5; stroke-dasharray: 8 6; }
+      .msg-box { fill: #1e293b; stroke: #475569; stroke-width: 1.5; rx: 8; }
+      .gate-box { fill: #2a183b; stroke: #c084fc; stroke-width: 2; rx: 8; }
+      .veto-box { fill: #3b0d1d; stroke: #fb7185; stroke-width: 2; rx: 8; }
+      .ok-box { fill: #0d2e26; stroke: #10b981; stroke-width: 2; rx: 8; }
+      .txt-hdr { font-family: 'Segoe UI', Arial, sans-serif; font-size: 18px; font-weight: 700; fill: #f8fafc; text-anchor: middle; }
+      .txt-sub { font-family: 'Consolas', monospace; font-size: 13px; fill: #94a3b8; text-anchor: middle; }
+      .txt-step { font-family: 'Segoe UI', Arial, sans-serif; font-size: 15px; font-weight: 600; fill: #e2e8f0; }
+      .txt-code { font-family: 'Consolas', monospace; font-size: 13px; fill: #38bdf8; }
+      .txt-veto { font-family: 'Consolas', monospace; font-size: 13px; font-weight: 700; fill: #fb7185; }
+      .arrow-blue { stroke: #38bdf8; stroke-width: 3; fill: none; marker-end: url(#m-blue); }
+      .arrow-red { stroke: #fb7185; stroke-width: 3; fill: none; marker-end: url(#m-red); }
+      .arrow-purple { stroke: #c084fc; stroke-width: 3; fill: none; marker-end: url(#m-purple); }
+      .arrow-green { stroke: #10b981; stroke-width: 3; fill: none; marker-end: url(#m-green); }
+    </style>
+    <marker id="m-blue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#38bdf8"/></marker>
+    <marker id="m-red" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#fb7185"/></marker>
+    <marker id="m-purple" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#c084fc"/></marker>
+    <marker id="m-green" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#10b981"/></marker>
+  </defs>
+
+  <rect class="bg" width="1920" height="1080"/>
+  <text x="60" y="65" class="title">Idle Deallocation, [Snooze 3h] Handshake &amp; Pre-Warm Sequence</text>
+  <text x="60" y="98" class="subtitle">FOCUS + Monitor + Webhook Fusion -&gt; AI Confidence Gate -&gt; Graph Presence &amp; Teams Snooze -&gt; Topological Stop/Start</text>
+
+  <!-- 5 Lifelines -->
+  <rect class="actor" x="80" y="135" width="260" height="75"/>
+  <text x="210" y="168" class="txt-hdr">FOCUS &amp; Monitor</text>
+  <text x="210" y="192" class="txt-sub">Cost + CPU + SQL + Git</text>
+  <line class="lifeline" x1="210" y1="210" x2="210" y2="990"/>
+
+  <rect class="actor-ai" x="440" y="135" width="280" height="75"/>
+  <text x="580" y="168" class="txt-hdr">AI Idle Forecaster</text>
+  <text x="580" y="192" class="txt-sub">Predict-IdleDeallocationWindow</text>
+  <line class="lifeline" x1="580" y1="210" x2="580" y2="990"/>
+
+  <rect class="actor-graph" x="830" y="135" width="270" height="75"/>
+  <text x="965" y="168" class="txt-hdr">Graph v2.x &amp; Work IQ</text>
+  <text x="965" y="192" class="txt-sub">Presence + Teams [Snooze 3h]</text>
+  <line class="lifeline" x1="965" y1="210" x2="965" y2="990"/>
+
+  <rect class="actor" x="1210" y="135" width="270" height="75"/>
+  <text x="1345" y="168" class="txt-hdr">Azure Control Plane</text>
+  <text x="1345" y="192" class="txt-sub">Invoke-AzRestMethod Stop/Start</text>
+  <line class="lifeline" x1="1345" y1="210" x2="1345" y2="990"/>
+
+  <rect class="actor" x="1590" y="135" width="250" height="75"/>
+  <text x="1715" y="168" class="txt-hdr">07:30 UTC Pre-Warm</text>
+  <text x="1715" y="192" class="txt-sub">Start-PreWarmSequence.ps1</text>
+  <line class="lifeline" x1="1715" y1="210" x2="1715" y2="990"/>
+
+  <!-- Step 1 -->
+  <path class="arrow-purple" d="M 210 270 L 570 270"/>
+  <rect class="msg-box" x="240" y="235" width="305" height="30"/>
+  <text x="255" y="255" class="txt-step">1. Ingest FOCUS 1.0 + Monitor + Webhooks</text>
+
+  <!-- Step 2: AI Gate Box -->
+  <rect class="gate-box" x="400" y="305" width="360" height="120"/>
+  <text x="420" y="335" class="txt-step">2. AI Confidence &amp; Prod Gate:</text>
+  <text x="420" y="360" class="txt-code">• Prod/DR tag -&gt; VETO_PRODUCTION_PROTECTED</text>
+  <text x="420" y="383" class="txt-code">• Score &lt; 0.74 -&gt; ABSTAIN_DEFER_TO_HUMAN_SNOOZE</text>
+  <text x="420" y="406" class="txt-code">• Anomaly &gt;= 1.8x -&gt; Flag Cost Anomaly</text>
+
+  <!-- Step 3 -->
+  <path class="arrow-green" d="M 580 480 L 955 480"/>
+  <rect class="msg-box" x="615" y="445" width="315" height="30"/>
+  <text x="630" y="465" class="txt-step">3. GET /v1.0/users/{upn}/presence</text>
+
+  <!-- Step 4 -->
+  <path class="arrow-green" d="M 965 555 L 965 555"/>
+  <rect class="ok-box" x="805" y="515" width="320" height="80"/>
+  <text x="825" y="545" class="txt-step">4. Post Teams [Snooze 3h] Card</text>
+  <text x="825" y="570" class="txt-code">If Snooze or Available -&gt; DEFER</text>
+
+  <!-- Step 5: Veto / Defer -->
+  <path class="arrow-red" d="M 965 645 L 220 645"/>
+  <rect class="veto-box" x="380" y="610" width="420" height="30"/>
+  <text x="395" y="630" class="txt-veto">5a. Snooze Lease Active -&gt; Skip Deallocation</text>
+
+  <!-- Step 6: Execute Stop -->
+  <path class="arrow-blue" d="M 965 725 L 1335 725"/>
+  <rect class="msg-box" x="995" y="690" width="315" height="30"/>
+  <text x="1010" y="710" class="txt-step">5b. Offline/Unclaimed -&gt; Topological Stop</text>
+
+  <!-- Step 7: Topological Stop Box -->
+  <rect class="ok-box" x="1185" y="755" width="320" height="90"/>
+  <text x="1205" y="785" class="txt-step">6. Ordered Deallocation:</text>
+  <text x="1205" y="810" class="txt-code">AksUserPools -&gt; AksStop -&gt; AppSvc -&gt; DB</text>
+  <text x="1205" y="832" class="txt-code">Mute Non-Prod Alerts</text>
+
+  <!-- Step 8: Pre-warm -->
+  <path class="arrow-blue" d="M 1345 900 L 1705 900"/>
+  <rect class="msg-box" x="1380" y="865" width="295" height="30"/>
+  <text x="1395" y="885" class="txt-step">7. 07:30 UTC Reverse Pre-Warm</text>
+</svg>
