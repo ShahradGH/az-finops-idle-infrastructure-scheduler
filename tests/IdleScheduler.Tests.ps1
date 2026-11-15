@@ -124,12 +124,12 @@ Describe 'Azure FinOps Idle Infrastructure Scheduler - Verification Matrix' {
         }
 
         It 'N-05: Zero Bicep or Terraform files exist in repository' {
-            $iac = Get-ChildItem -Path $script:RepoRoot -Recurse -File | Where-Object { $_.Extension -in @('.bicep', '.tf') }
+            $iac = @(Get-ChildItem -Path $script:RepoRoot -Recurse -File | Where-Object { $_.Extension -in @('.bicep', '.tf') })
             $iac.Count | Should -Be 0
         }
 
         It 'N-06: Zero secrets, internal IPs, or internal sequence numbers in repo' {
-            $files = Get-ChildItem -Path $script:RepoRoot -Recurse -File | Where-Object { $_.FullName -notmatch '\\\.git\\|\\tests\\' -and $_.Extension -in @('.ps1', '.md', '.json', '.kql') }
+            $files = Get-ChildItem -Path $script:RepoRoot -Recurse -File | Where-Object { $_.FullName -notmatch '[\\/]\.git[\\/]|[\\/]tests[\\/]' -and $_.Extension -in @('.ps1', '.md', '.json', '.kql') }
             foreach ($f in $files) {
                 $raw = Get-Content $f.FullName -Raw
                 $raw | Should -Not -Match 'AccountKey=|SharedAccessSignature=|192\.142\.41\.43|mvpfoundry\.alerasoul\.net|Decision Pack 0'
